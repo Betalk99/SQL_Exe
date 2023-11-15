@@ -28,6 +28,39 @@ public class Main {
                     ")";
             stmt.execute(createTable);
 
+            String inser1 = "INSERT INTO students" +
+                    "(`last_name`," +
+                    "`first_name)" +
+                    "VALUES " +
+                    "(`Orlandi`," +
+                    "`Bruno`)";
+            String inser2 = "INSERT INTO students" +
+                    "(`last_name`," +
+                    "`first_name)" +
+                    "VALUES " +
+                    "(`Troiano`," +
+                    "`Antonio`)";
+            String inser3 = "INSERT INTO students" +
+                    "(`last_name`," +
+                    "`first_name)" +
+                    "VALUES " +
+                    "(`Di grigoli`," +
+                    "`Luca`)";
+            String inser4 = "INSERT INTO students" +
+                    "(`last_name`," +
+                    "`first_name)" +
+                    "VALUES " +
+                    "(`Buonanno`," +
+                    "`Antonio`)";
+
+            stmt.execute(inser1);
+            stmt.execute(inser2);
+            stmt.execute(inser3);
+            stmt.execute(inser4);
+
+
+
+
         } catch(SQLException e) {
             System.out.println(e.getMessage());
         } finally {
