@@ -21,16 +21,16 @@ public class Main {
             // more processing here
             stmt = conn.createStatement();
             String createTable = "CREATE TABLE students(" +
-                    "student_id int NOT NULL AUTO_INCREMENT," +
+                    "student_id INT NOT NULL AUTO_INCREMENT," +
                     "last_name varchar(30)" +
                     "first_name varchar(30)" +
                     "PRIMARY KEY (student_id)" +
                     ")";
-            stmt.execute(createTable);
+            stmt.executeUpdate(createTable);
 
             String inser1 = "INSERT INTO students" +
                     "(`last_name`," +
-                    "`first_name)" +
+                    "`first_name`)" +
                     "VALUES " +
                     "(`Orlandi`," +
                     "`Bruno`)";
@@ -53,10 +53,10 @@ public class Main {
                     "(`Buonanno`," +
                     "`Antonio`)";
 
-            stmt.execute(inser1);
-            stmt.execute(inser2);
-            stmt.execute(inser3);
-            stmt.execute(inser4);
+            stmt.executeUpdate(inser1);
+            stmt.executeUpdate(inser2);
+            stmt.executeUpdate(inser3);
+            stmt.executeUpdate(inser4);
 
 
 

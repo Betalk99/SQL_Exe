@@ -29,17 +29,17 @@ public class Main {
             System.out.println(lastName);
             String createColumnCountry = "ALTER TABLE students " + // create new column country
                     "ADD country varchar(30)";
-            stmt.execute(createColumnCountry);
+            stmt.executeUpdate(createColumnCountry);
             System.out.println("Create column country");
             //populate column country with 4 query
             String setCountryQuery1 = "UPDATE `newdb`.`students` SET `country`='Italy' WHERE  `student_id`=1";
             String setCountryQuery2 = "UPDATE `newdb`.`students` SET `country`='Italy' WHERE  `student_id`=2";
             String setCountryQuery3 = "UPDATE `newdb`.`students` SET `country`='Germany' WHERE  `student_id`=3" ;
             String setCountryQuery4 = "UPDATE `newdb`.`students` SET `country`='Germany' WHERE  `student_id`=4" ;
-            stmt.execute(setCountryQuery1);
-            stmt.execute(setCountryQuery2);
-            stmt.execute(setCountryQuery3);
-            stmt.execute(setCountryQuery4);
+            stmt.executeUpdate(setCountryQuery1);
+            stmt.executeUpdate(setCountryQuery2);
+            stmt.executeUpdate(setCountryQuery3);
+            stmt.executeUpdate(setCountryQuery4);
             System.out.println("Column upgrade");
 
 
